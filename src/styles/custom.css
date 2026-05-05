@@ -1,0 +1,12 @@
+/* Beebeeb brand accent — amber */
+:root {
+  --sl-color-accent-low: oklch(0.96 0.04 88);
+  --sl-color-accent: oklch(0.82 0.17 84);
+  --sl-color-accent-high: oklch(0.66 0.15 72);
+}
+
+:root[data-theme='light'] {
+  --sl-color-accent-low: oklch(0.96 0.04 88);
+  --sl-color-accent: oklch(0.66 0.15 72);
+  --sl-color-accent-high: oklch(0.50 0.13 68);
+}
