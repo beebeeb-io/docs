@@ -6,7 +6,7 @@
 <p align="center">
   <a href="https://beebeeb.io/docs"><img src="https://img.shields.io/badge/docs-beebeeb.io%2Fdocs-f5b800.svg" alt="Live docs" /></a> &nbsp;
   <img src="https://img.shields.io/badge/built%20with-Starlight-555.svg" alt="Built with Starlight" /> &nbsp;
-  <img src="https://img.shields.io/badge/docs-CC%20BY--NC--ND%204.0-555.svg" alt="License: CC BY-NC-ND 4.0" /> &nbsp;
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-CC%20BY--NC--ND%204.0-555.svg" alt="License: CC BY-NC-ND 4.0" /></a> &nbsp;
   <a href="SECURITY.md"><img src="https://img.shields.io/badge/security-policy-555.svg" alt="Security policy" /></a>
 </p>
 <p align="center"><a href="https://beebeeb.io">Website</a> &nbsp;·&nbsp; <a href="https://beebeeb.io/docs">Live docs</a> &nbsp;·&nbsp; <a href="SECURITY.md">Report a vulnerability</a></p>
@@ -61,4 +61,4 @@ End-to-end encrypted, zero-knowledge cloud storage — made in Europe.
 
 ## License
 
-Documentation content is licensed CC BY-NC-ND 4.0 — © Initlabs B.V. (KvK 95157565), Wijchen, Netherlands.
+[CC BY-NC-ND 4.0](LICENSE) — documentation content. © Initlabs B.V. (KvK 95157565), Wijchen, Netherlands.
