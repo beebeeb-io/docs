@@ -45,11 +45,11 @@ Recipients see a preview of the file (if supported) with:
 - Who shared it and when it expires
 - A "Download and decrypt" button
 
-The [Glassbox panel](/guides/sharing/#the-glassbox-panel) shows the actual ciphertext from our servers alongside the decrypted file — a visual demonstration that we can't read the content.
+The Glassbox panel on the share page shows the actual ciphertext our servers hold alongside the decrypted file — a visual demonstration that we can't read the content.
 
 ## Revoking a link
 
-Go to **Settings → Shares → My links** (or the Shares tab in the sidebar). Click the **Revoke** button next to any active link.
+Go to **Shared** in the sidebar to see your active links. Click the **Revoke** button next to any of them.
 
 Revocation nulls out the wrapped file key on our server. Even someone who has the URL can no longer decrypt the file — the key doesn't exist anymore. The URL becomes permanently dead.
 

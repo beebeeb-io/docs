@@ -1,0 +1,7 @@
+# Reviewed exceptions for scripts/claims-guard/claims-guard.sh. Format:
+#   path|token|evidence
+# One line per (path, token) pair. See scripts/claims-guard/claims-guard.sh
+# header for the full rules; there is no other bypass.
+
+astro.config.mjs|docs.beebeeb.io|Starlight's `site` config field names the eventual publish target for this repo. It is not a live host today — `docs.beebeeb.io` does not resolve (verified 2026-09-25) — and README.md's "Where this lives" section states that plainly. Not a runtime fetch: `site` only affects generated canonical URLs / sitemap at build time.
+astro.config.mjs|github.com|Starlight config's `social` GitHub icon link and `editLink.baseUrl` point at the org's own public GitHub (beebeeb-io) — the standard Starlight "edit this page" + social-link surface, not a third-party data-path fetch.

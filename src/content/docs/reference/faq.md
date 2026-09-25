@@ -17,27 +17,27 @@ None of that is your actual data. Your files remain secure unless the attacker a
 
 ## What if I forget my password?
 
-You can reset your password using your recovery phrase. Go to [app.beebeeb.io/recover](https://app.beebeeb.io/recover) and enter your recovery phrase.
+You can reset your password using your recovery phrase. Go to [app.beebeeb.io/recover-with-phrase](https://app.beebeeb.io/recover-with-phrase) and enter your recovery phrase.
 
 If you have forgotten both your password and your recovery phrase, your data is unrecoverable. We are sorry — this is the consequence of genuine zero-knowledge encryption.
 
 ## What if I lose my recovery phrase?
 
-If you still know your password and have an active session, go to **Settings → Security → Recovery phrase** and generate a new one. This replaces the old phrase; your files are unaffected.
+There's no way to regenerate it — we cannot retrieve, reset, or generate a new recovery phrase for your account. The one you were shown at signup is the only one it will ever have.
 
-If you have lost both your password and your recovery phrase, see above.
+As long as you still know your password and can sign in, this isn't urgent: your recovery phrase only matters as a fallback for the day you *also* lose your password. But if you've lost the paper copy, that fallback is gone, and there's no way to restore it — see above for what happens if you lose both.
 
 ## Is Beebeeb open source?
 
-The cryptography library ([beebeeb-io/core](https://github.com/beebeeb-io/core)) and CLI ([beebeeb-io/cli](https://github.com/beebeeb-io/cli)) are open source. The web client ([beebeeb-io/web](https://github.com/beebeeb-io/web)) is also open source.
+Every product client is: the cryptography library ([core](https://github.com/beebeeb-io/core)), the [CLI](https://github.com/beebeeb-io/cli), the [web app](https://github.com/beebeeb-io/web), the [mobile app](https://github.com/beebeeb-io/mobile), and the [desktop app](https://github.com/beebeeb-io/desktop) — every line of code that touches your keys or your files, on every platform, is public.
 
-The server is private — it contains operational code that does not need to be public to provide security guarantees. The security comes from the open-source crypto, not from hiding server code.
+The server, the marketing site, and internal marketing tooling are private. The server contains operational code that does not need to be public to provide security guarantees — the security comes from the open-source crypto and the zero-knowledge architecture, not from hiding server code. None of that code has been externally audited yet; see [Security & encryption](/reference/security/).
 
 ## Where is my data stored?
 
-Encrypted files are stored in Hetzner Object Storage in Falkenstein, Germany. API servers are also on Hetzner infrastructure. We do not use AWS, Azure, or Google Cloud. All infrastructure is within the EU.
+Falkenstein, Germany — that's where both the object storage holding your encrypted files and the API servers run today. We do not use AWS, Azure, or Google Cloud. All infrastructure is within the EU, and the company (Initlabs B.V.) is Dutch, with no US parent.
 
-See [What "Made in Europe" means](https://beebeeb.io/blog/what-made-in-europe-means) for details on jurisdiction and the Cloud Act.
+See [Beebeeb's security page](https://beebeeb.io/security) for more on jurisdiction.
 
 ## Can I self-host Beebeeb?
 
@@ -47,7 +47,7 @@ Not yet, but it's on the roadmap. The server code is structurally designed to su
 
 There is no hard file size limit in the client or server. Very large files (>10 GB) will take significant time to encrypt and upload depending on your connection. We recommend the CLI or desktop app for large files rather than the browser.
 
-The default plan includes 20 GB of storage. Higher limits are available on paid plans.
+Plans start at 100 GB (Starter) and scale to 200 GB (Basic) and 1 TB base with paid add-ons up to 99 TB self-serve (Pro) — see [beebeeb.io/pricing](https://beebeeb.io/pricing) for current plans and prices. Beyond 99 TB, contact support for a custom quote; we never promise "unlimited" storage.
 
 ## Does Beebeeb work offline?
 
@@ -57,9 +57,9 @@ Full offline support (two-way sync with conflict resolution) is on the roadmap.
 
 ## Can I use Beebeeb for HIPAA / GDPR regulated data?
 
-Beebeeb's architecture — zero-knowledge encryption, EU infrastructure, Dutch jurisdiction — is well-suited for GDPR compliance. The encryption means we are not a "data processor" in the usual sense: we hold ciphertext that is meaningless without your keys.
+Initlabs B.V. is established in the Netherlands and processes personal data under the GDPR and Dutch implementing law. Beebeeb's zero-knowledge architecture means we hold only ciphertext that is meaningless without your keys — but that's an architectural property, not a compliance certificate on its own. Current status on specific frameworks (certifications, assessments) is tracked on [Beebeeb's security page](https://beebeeb.io/security), not here — check there rather than trusting this doc to stay current on it. We offer a Data Processing Agreement (DPA) for EU customers — contact support to request one.
 
-For HIPAA, Beebeeb can serve as encrypted storage, but HIPAA compliance requires more than encrypted storage (audit logging, access controls, BAA agreement). We offer a Data Processing Agreement (DPA) for EU customers. Contact support to discuss enterprise requirements.
+HIPAA is a US regulatory framework that Beebeeb does not claim to satisfy. Encrypted storage alone is not HIPAA compliance — that also requires audit logging, access controls, and a signed BAA, none of which we currently provide. Contact support if you have specific regulated-data requirements to discuss.
 
 ## How does the share link work cryptographically?
 
@@ -69,6 +69,6 @@ When someone opens a share link, their browser fetches the encrypted file from o
 
 ## How do I delete my account?
 
-Go to **Settings → Account → Delete account**. This requires step-up authentication (you'll be asked to confirm your password).
+Go to **Settings → Profile → Delete account** (or Settings → Privacy → Delete account — it's linked from both). This requires step-up authentication (you'll be asked to confirm your password).
 
 Deletion permanently removes your account, all files (both the database records and the storage objects), and all active sessions. This action cannot be undone.
