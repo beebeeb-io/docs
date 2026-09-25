@@ -13,7 +13,7 @@ Beebeeb uses OPAQUE — a Password-Authenticated Key Exchange protocol — which
 
 ## 2. Save your recovery phrase
 
-After signup, you'll see a 24-word recovery phrase. **Write it down on paper and store it somewhere safe.**
+After signup, you'll see a 12-word recovery phrase. **Write it down on paper and store it somewhere safe.**
 
 This phrase is the only way to recover your account if you lose access to your device. We cannot recover it for you. There is no "forgot recovery phrase" button — by design.
 
@@ -27,7 +27,7 @@ Once you've written it down, tick the confirmation checkbox and click **Verify m
 
 From the drive view, click **Upload** (or drag and drop files into the window).
 
-Your files are encrypted on your device before they leave it. The encryption key is derived from your master key, which is derived from your recovery phrase. We never see your files, filenames, or keys.
+Your files are encrypted on your device before they leave it. Each file's encryption key is derived from your master key, and your master key is derived from your recovery phrase — your password only unlocks access to it, it doesn't derive it. We never see your files, filenames, or keys.
 
 You can also create folders to organise your files.
 
@@ -43,5 +43,7 @@ For sensitive shares, you can add a passphrase (the recipient will be prompted t
 
 - Read about the [recovery phrase](/getting-started/recovery-phrase/) and what happens if you lose it
 - Learn about [sharing files](/guides/sharing/) in detail
+- See and manage your [connected devices](/guides/devices/)
 - Install the [mobile app](/guides/mobile/) or [desktop app](/guides/desktop/)
 - Set up the [CLI](/cli/install/) for scripted workflows
+- Check [plans and billing basics](/reference/billing/) if you're deciding on a plan

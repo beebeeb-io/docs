@@ -40,6 +40,7 @@ export default defineConfig({
           label: 'Features',
           items: [
             { label: 'Sharing files', slug: 'guides/sharing' },
+            { label: 'Devices', slug: 'guides/devices' },
             { label: 'Mobile setup', slug: 'guides/mobile' },
             { label: 'Desktop app', slug: 'guides/desktop' },
           ],
@@ -54,6 +55,7 @@ export default defineConfig({
           label: 'Reference',
           items: [
             { label: 'Security & encryption', slug: 'reference/security' },
+            { label: 'Account & billing basics', slug: 'reference/billing' },
             { label: 'FAQ', slug: 'reference/faq' },
           ],
         },

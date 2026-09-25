@@ -5,30 +5,33 @@ description: Download the Beebeeb desktop app, use the system tray, and configur
 
 The Beebeeb desktop app wraps the web client in a native shell built with Tauri. It adds a system tray icon, native menus, and window state persistence.
 
+Windows and Linux builds are released today; macOS is still dev-signed-only (see Download below). The macOS-specific details on this page (menu bar, Login Items, `Cmd` shortcuts) describe the same shell running on macOS once a signed release ships — they aren't testable against a public build yet.
+
 ## Download
 
-Download the latest release from [beebeeb.io/download](https://beebeeb.io/download):
+**Status: Windows and Linux are released; macOS is not yet.** Grab the latest release from [github.com/beebeeb-io/desktop/releases/latest](https://github.com/beebeeb-io/desktop/releases/latest) (the [beebeeb.io/download](https://beebeeb.io/download) page links here once desktop is announced there):
 
-| Platform | Format |
-|----------|--------|
-| macOS (Apple Silicon) | `.dmg` |
-| macOS (Intel) | `.dmg` |
-| Windows | `.msi` |
-| Linux | `.AppImage` / `.deb` |
-
-### macOS
-
-Open the `.dmg`, drag Beebeeb to Applications. On first launch, macOS may show a security warning — go to **System Settings → Privacy & Security** and click **Open Anyway**.
+| Platform | Format | Status |
+|----------|--------|--------|
+| Windows | `.msi` / `.exe` (NSIS) | Released, not yet code-signed |
+| Linux | `.AppImage` / `.deb` / `.rpm` | Released |
+| macOS | — | Not yet released — dev-signed builds run on real hardware, but there's no public download until Developer ID notarization is wired up |
 
 ### Windows
 
-Run the `.msi` installer. Windows SmartScreen may warn about an unknown publisher — click **More info → Run anyway**. We're working on code signing certification.
+Run the `.msi` or `.exe` installer. Windows SmartScreen will warn "unknown publisher" — click **More info → Run anyway**. This is expected: the installer isn't code-signed yet, not a sign of tampering.
 
 ### Linux
 
 For AppImage: `chmod +x Beebeeb-*.AppImage && ./Beebeeb-*.AppImage`
 
 For Debian/Ubuntu: `sudo dpkg -i beebeeb_*.deb`
+
+For Fedora/RHEL: `sudo rpm -i beebeeb_*.rpm`
+
+### macOS
+
+Not available yet. Development-signed builds already run on real Mac hardware, including the Finder File Provider integration — but a signed, notarized release isn't in CI yet. This page will be updated the day one ships.
 
 ## System tray
 
@@ -55,9 +58,9 @@ Standard text shortcuts (Cut, Copy, Paste, Select All, Undo) work normally in th
 
 The app remembers your window position and size between sessions. To reset to defaults, hold `Option/Alt` when launching, or delete the window state file:
 
-- **macOS**: `~/Library/Application Support/io.beebeeb.desktop/`
-- **Windows**: `%APPDATA%\io.beebeeb.desktop\`
-- **Linux**: `~/.config/io.beebeeb.desktop/`
+- **macOS**: `~/Library/Application Support/io.beebeeb.app/`
+- **Windows**: `%APPDATA%\io.beebeeb.app\`
+- **Linux**: `~/.config/io.beebeeb.app/`
 
 ## Auto-start at login
 

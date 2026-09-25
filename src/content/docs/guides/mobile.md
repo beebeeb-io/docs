@@ -1,13 +1,13 @@
 ---
 title: Mobile setup
-description: Install the Beebeeb iOS app, sign in, and upload files from your camera roll.
+description: What the Beebeeb iOS app does — sign in, camera roll upload, photo backup, and Share Extension support. Coming to the App Store; not yet available.
 ---
 
 The Beebeeb iOS app gives you encrypted access to your files from your phone, with background photo backup and Share Extension support.
 
 ## Installation
 
-Download **Beebeeb** from the [App Store](https://apps.apple.com/app/beebeeb/id123456789).
+**The iOS app is not on the App Store yet.** It's in active development and review, and this page describes what it does once it's available — see [beebeeb.io/download](https://beebeeb.io/download) for current status. Android is planned to follow after the iOS launch; until then, use the [web app](https://app.beebeeb.io) or the [CLI](/cli/install/) on Android.
 
 The app requires iOS 16.0 or later. An Apple Silicon Mac with macOS 13+ can run the iOS version natively.
 
@@ -21,7 +21,7 @@ After signing in, you'll be asked to enter or verify your recovery phrase. This 
 
 Tap the **+** button (bottom right) and choose **Upload photo**. Grant photo library access when prompted.
 
-Photos are encrypted before they leave your device, chunk by chunk. Large photos are split into 4 MB chunks, each encrypted independently with AES-256-GCM. The encrypted chunks are uploaded to Hetzner Object Storage in Falkenstein, Germany.
+Photos are encrypted before they leave your device, chunk by chunk — each chunk independently with AES-256-GCM. The encrypted chunks are uploaded to object storage in Falkenstein, Germany.
 
 ## Photo backup
 
